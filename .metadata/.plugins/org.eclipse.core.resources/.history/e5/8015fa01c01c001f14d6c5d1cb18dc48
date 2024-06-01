@@ -1,0 +1,32 @@
+package com.monocept.test;
+
+import java.util.Scanner;
+
+import com.monocept.model.InputValidator;
+
+public class InputValidatorTest {
+ public static void main(String[] args) {
+	 Scanner scanner=new Scanner(System.in);
+        InputValidator validator=new InputValidator();
+        InputValidator validator1=new InputValidator();
+        InputValidator validator2=new InputValidator();
+       
+        String userName=scanner.next();
+      System.out.println(validator.validateUsername(userName));
+      String password=scanner.next();
+      System.out.println(validator.validatePassword(password));
+      String email=scanner.next();
+      System.out.println(validator.validateEmail(email));
+      
+      
+      
+     
+    }
+
+
+
+	
+		
+		
+	
+}

@@ -1,0 +1,55 @@
+package com.monocept.test;
+
+import java.util.Scanner;
+
+import com.monocept.model.InputValidator;
+
+public class InputValidatorTest {
+	Scanner scanner = new Scanner(System.in);
+	public static void runUserName() {
+        
+        String[] usernames = {"Pradeep"};
+        for (String username : usernames) {
+            boolean result = InputValidator.validateUsername(username);
+            System.out.println("Username '" + username + "': " );
+            if(result) {
+            	System.out.println("valid");
+            }
+        }
+
+       
+       
+    }
+
+    public static void main(String[] args) {
+        runUserName();
+        runPassword();
+        runEmail();
+    }
+
+	private static void runEmail() {
+		 String[] emails = {"pradeep@gmail.com"};
+	        for (String email : emails) {
+	            boolean result = InputValidator.validateEmail(email);
+	            System.out.println("Email '" + email + "': ");
+	            if(result) {
+	            	System.out.println("valid");
+	            }
+	        }
+		
+		
+	}
+
+	private static void runPassword() {
+		  String[] passwords = {""};
+	        for (String password : passwords) {
+	            boolean result = InputValidator.validatePassword(password);
+	            System.out.println("Password '" + password + "': ");
+	            if(result) {
+	            	System.out.println("valid");
+	            }
+	        }
+		
+		
+	}
+}

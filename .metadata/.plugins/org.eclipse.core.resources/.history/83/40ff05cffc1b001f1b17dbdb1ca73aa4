@@ -1,0 +1,41 @@
+package com.monocept.object;
+
+import java.util.Scanner;
+
+public class ObjectCathlenics {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner scanner =new Scanner(System.in);
+System.out.println("Enter matrix values");
+int matrix[][]=new int[3][3];
+createRow(matrix,scanner);
+displayMatrix(matrix);
+
+
+	}
+
+	private static void displayMatrix(int[][] matrix) {
+		for(int i=0;i<3;i++) {
+			System.out.println(matrix[i][j]);
+		}
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void createRow(int[][] matrix, Scanner scanner) {
+		// TODO Auto-generated method stub
+		for(int i=0;i<3;i++) {
+			createColumn(i,matrix,scanner);
+		}
+		
+	}
+
+	private static void createColumn(int i, int[][] matrix, Scanner scanner) {
+		// TODO Auto-generated method stub
+		for(int j=0;j<3;j++) {
+			matrix[i][j]=scanner.nextInt()
+;		}
+	}
+
+}

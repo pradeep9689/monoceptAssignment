@@ -1,0 +1,21 @@
+package com.monocept.test;
+
+import com.monocept.model.BoxWeight;
+
+public class BoxWeightTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+BoxWeight boxweight=new BoxWeight();
+boxweight.dept=20;
+boxweight.width=30;
+boxweight.height=50;
+boxweight.weight=100;
+System.out.println(boxweight.dept);
+System.out.println(boxweight.width);
+System.out.println(boxweight.height);
+System.out.println(boxweight.weight);
+
+	}
+
+}

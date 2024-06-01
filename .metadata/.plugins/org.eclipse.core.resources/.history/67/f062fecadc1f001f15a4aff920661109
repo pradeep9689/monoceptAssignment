@@ -1,0 +1,44 @@
+package com.monocept.staticModel;
+
+public class Account {
+	private int accountNumber;
+	private static int count;
+	private String accountName;
+	private double balance;
+	public Account(int accountNumber, String accountNamec,double balance ) {
+		this.accountNumber=accountNumber;
+		this.accountName=accountName;
+		this.balance=balance;
+		count++;
+		System.out.println("Account "+count+" "+"is created");
+		
+	}
+	  
+
+	    
+	    public int getAccountNumber() {
+	        return accountNumber;
+	    }
+
+	    public String getName() {
+	        return accountName;
+	    }
+
+	    public double getBalance() {
+	        return balance;
+	    }
+	    public static int getAccountCount() {
+	        return count;
+	    }
+
+
+
+		@Override
+		public String toString() {
+			return "accountNumber=" + accountNumber + ", accountName=" + accountName + ", balance=" + balance
+					+ "";
+		}
+	
+
+
+}

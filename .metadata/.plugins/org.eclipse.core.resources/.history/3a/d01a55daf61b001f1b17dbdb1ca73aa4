@@ -1,0 +1,32 @@
+package com.monocept.test;
+
+import java.util.Scanner;
+
+import com.monocept.model.StudentOne;
+
+public class StudentOneTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner scanner=new Scanner(System.in);
+System.out.println("Enter the Numbers of you want to create");
+int n=scanner.nextInt();
+StudentOne student[]=new StudentOne[n];
+for(int i=0;i<n;i++) {
+	student[i]=new StudentOne();
+	System.out.println("Enter Rollnumber");
+	student[i].setRollNumber(scanner.nextInt());
+	System.out.println("Enter Name");
+	student[i].setName(scanner.next());
+	System.out.println("Enter Age");
+	student[i].setAge(scanner.nextInt());
+	System.out.println("Enter Email");
+	student[i].setEmail(scanner.next());
+}
+for(int i=0;i<student.length;i++) {
+	System.out.println(student[i]);
+
+
+	}
+
+}

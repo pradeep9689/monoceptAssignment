@@ -1,0 +1,28 @@
+package com.monocept.model;
+
+public class Box {
+	private double width;
+	private double height;
+	private double dept;
+	
+	
+	public double getWidth() {
+		return width;
+	}
+	public void setWidth(double width) {
+		this.width = width;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	public double getDept() {
+		return dept;
+	}
+	public void setDept(double dept) {
+		this.dept = dept;
+	}
+
+}
