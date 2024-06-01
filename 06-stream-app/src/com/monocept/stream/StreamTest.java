@@ -12,7 +12,7 @@ public class StreamTest {
 	     int countwords=0;
 		// TODO Auto-generated method stub
 		 try {
-			 System.out.println("hi");
+			
 		     
 		      FileReader fileInputStream = new FileReader("D:\\Pradeep\\06-stream-app\\src\\com\\monocept\\stream\\test");
 		     
