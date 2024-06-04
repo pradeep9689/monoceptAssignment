@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 import com.monocept.model.Account;
-import com.monocept.model.Car;
+
 import com.monocept.model.CurrentAccount;
 import com.monocept.model.SavingsAccount;
 
