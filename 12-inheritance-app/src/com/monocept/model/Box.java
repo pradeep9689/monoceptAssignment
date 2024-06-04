@@ -6,6 +6,15 @@ public class Box {
 	private double dept;
 	
 	
+	public Box() {
+		
+	}
+	public Box(double width, double height, double dept) {
+		
+		this.width = width;
+		this.height = height;
+		this.dept = dept;
+	}
 	public double getWidth() {
 		return width;
 	}

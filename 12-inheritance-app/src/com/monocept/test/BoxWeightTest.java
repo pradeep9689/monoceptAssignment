@@ -6,15 +6,12 @@ public class BoxWeightTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-BoxWeight boxweight=new BoxWeight();
-boxweight.setHeight(20);
-boxweight.setWeight(100);
-boxweight.setDept(50);
-boxweight.setWidth(100);
-System.out.println(boxweight.getHeight());
-System.out.println(boxweight.getDept());
-System.out.println(boxweight.getWeight());
-System.out.println(boxweight.getWidth());
+BoxWeight boxweight=new BoxWeight(10,29,39,40);
+
+System.out.println("hight "+boxweight.getHeight());
+System.out.println("Dept "+boxweight.getDept());
+System.out.println("Weight "+boxweight.getWeight());
+System.out.println("Width"+boxweight.getWidth());
 
 	}
 

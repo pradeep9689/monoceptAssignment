@@ -1,9 +1,0 @@
-package com.monocept.model;
-
-public class StudentOne {
-	private int rollNumber;
-	private String name;
-	private int age;
-	private String email;
-
-}

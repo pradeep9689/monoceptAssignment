@@ -11,22 +11,19 @@ public class StringTest {
 		  lastName.append(middleName);
 
 		  concat1(middleName);
-		  concat2(lastName);
-		  concat3(firstName);
+		  concat2(firstName);
 
 		  System.out.println(middleName);
 		  System.out.println(lastName);
 		  System.out.println(firstName);
 	}
-	private static void concat3(String firstName) {
+	private static void concat2(String firstName)
+	{
 		  firstName = firstName + " Techlabs Mumbai";
 		}
 
-		private static void concat2(StringBuilder lastName) {
-		  lastName.append(middleName);
-		}
-
-		private static void concat1(StringBuffer middleName) {
+		private static void concat1(StringBuffer middleName) 
+		{
 		  middleName.append(" Swabhav Mumbai");
 		}
 
