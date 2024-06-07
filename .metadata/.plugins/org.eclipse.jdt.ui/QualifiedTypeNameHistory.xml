@@ -27,10 +27,21 @@
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="com.monocept.model.Derived"/>
 <fullyQualifiedTypeName name="com.monocept.model.Z"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="com.monocept.model.Account"/>
 <fullyQualifiedTypeName name="com.monocept.model.Man"/>
 <fullyQualifiedTypeName name="com.monocept.model.Boy"/>
+<fullyQualifiedTypeName name="com.monocept.model.Playable"/>
+<fullyQualifiedTypeName name="com.monocept.model.Video"/>
+<fullyQualifiedTypeName name="com.monocept.model.Audio"/>
+<fullyQualifiedTypeName name="com.monocept.package1.A"/>
+<fullyQualifiedTypeName name="com.monocept.package1.A1"/>
 <fullyQualifiedTypeName name="com.monocept.model.Circle"/>
 <fullyQualifiedTypeName name="com.monocept.model.Rectangle"/>
+<fullyQualifiedTypeName name="com.monocept.model.Shape"/>
+<fullyQualifiedTypeName name="com.monocept.model.SmartHome"/>
+<fullyQualifiedTypeName name="com.monocept.model.Light"/>
+<fullyQualifiedTypeName name="com.monocept.model.Thermostat"/>
+<fullyQualifiedTypeName name="com.monocept.model.SecurityCamera"/>
+<fullyQualifiedTypeName name="com.monocept.innnerclasses.OuterClass.InnerClass"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

@@ -17,8 +17,8 @@ public class AccountTest {
     public static void main(String[] args) {
     	 Scanner scanner = new Scanner(System.in);
     	
-       private final  SavingsAccount savingsAccount=null;
-       private final CurrentAccount currentAccount=null;
+         SavingsAccount savingsAccount=null;
+        CurrentAccount currentAccount=null;
         
         
         public void run() {
