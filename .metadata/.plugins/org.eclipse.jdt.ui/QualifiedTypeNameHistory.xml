@@ -18,13 +18,7 @@
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="com.monocept.model.CurrentAccount"/>
 <fullyQualifiedTypeName name="com.monocept.model.SavingsAccount"/>
-<fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="com.monocept.model.Car"/>
-<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
-<fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="com.monocept.model.Derived"/>
 <fullyQualifiedTypeName name="com.monocept.model.Z"/>
 <fullyQualifiedTypeName name="com.monocept.model.Account"/>
@@ -43,5 +37,21 @@
 <fullyQualifiedTypeName name="com.monocept.model.Thermostat"/>
 <fullyQualifiedTypeName name="com.monocept.model.SecurityCamera"/>
 <fullyQualifiedTypeName name="com.monocept.innnerclasses.OuterClass.InnerClass"/>
+<fullyQualifiedTypeName name="com.monocept.model.Voter"/>
+<fullyQualifiedTypeName name="com.monocept.Exceptions.AgeNotValidException"/>
+<fullyQualifiedTypeName name="com.monocept.Exceptions.NegativeAmountException"/>
+<fullyQualifiedTypeName name="com.monocept.Exceptions.InsufficientFundsException"/>
+<fullyQualifiedTypeName name="com.monocept.model.BankAccount"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="com.monocept.Exceptions.NoSuchMovieFoundException"/>
+<fullyQualifiedTypeName name="com.monocept.Exceptions.CapacityFullException"/>
+<fullyQualifiedTypeName name="com.monocept.model.Movie"/>
+<fullyQualifiedTypeName name="com.monocept.model.SimpleMoviesApp"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
