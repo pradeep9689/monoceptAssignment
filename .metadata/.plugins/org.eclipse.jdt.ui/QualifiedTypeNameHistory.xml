@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.io.FileReader"/>
-<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="com.monocept.model.Employee"/>
-<fullyQualifiedTypeName name="com.monocept.model.Point"/>
-<fullyQualifiedTypeName name="com.monocept.model.Empoyee"/>
-<fullyQualifiedTypeName name="com.monocept.model.ComplexNumber"/>
-<fullyQualifiedTypeName name="com.monocept.model.AccountOne"/>
-<fullyQualifiedTypeName name="com.monocept.model.AccType"/>
-<fullyQualifiedTypeName name="com.monocept.model.StudentOne"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="com.monocept.model.InputValidator"/>
-<fullyQualifiedTypeName name="com.monocept.staticModel.StaticDemo"/>
-<fullyQualifiedTypeName name="com.monocept.staticModel.Account"/>
-<fullyQualifiedTypeName name="com.monocept.model.BoxWeight"/>
-<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
-<fullyQualifiedTypeName name="com.monocept.model.CurrentAccount"/>
-<fullyQualifiedTypeName name="com.monocept.model.SavingsAccount"/>
-<fullyQualifiedTypeName name="com.monocept.model.Car"/>
 <fullyQualifiedTypeName name="com.monocept.model.Derived"/>
 <fullyQualifiedTypeName name="com.monocept.model.Z"/>
 <fullyQualifiedTypeName name="com.monocept.model.Account"/>
@@ -53,5 +34,30 @@
 <fullyQualifiedTypeName name="com.monocept.Exceptions.CapacityFullException"/>
 <fullyQualifiedTypeName name="com.monocept.model.Movie"/>
 <fullyQualifiedTypeName name="com.monocept.model.SimpleMoviesApp"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.ListIterator"/>
+<fullyQualifiedTypeName name="com.monocept.model.ArrayListDemo"/>
+<fullyQualifiedTypeName name="com.monocept.model.Person"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.monocept.model.EmployeeByName"/>
+<fullyQualifiedTypeName name="com.monocept.model.EmployeeBySalary"/>
+<fullyQualifiedTypeName name="com.monocept.model.EmployeeCompare.SortByName"/>
+<fullyQualifiedTypeName name="com.monocept.model.EmployeeCompare"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.monocept.model.InsurancePolicy"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.monocept.model.CompareClass.SortByName"/>
+<fullyQualifiedTypeName name="com.monocept.model.CompareClass"/>
+<fullyQualifiedTypeName name="com.monocept.model.CompareClass.SortByAmount"/>
+<fullyQualifiedTypeName name="com.monocept.model.CompareClass.SortByNumber"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.text.ParseException"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.monocept.model.CompareClass.SortByDate"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="com.monocept.model.MyThread"/>
 </qualifiedTypeNameHistroy>

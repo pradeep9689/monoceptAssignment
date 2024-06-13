@@ -35,12 +35,12 @@ public class BankAccount {
 	public void deposit(double amount) {
 		if(amount<0)
 			throw new NegativeAmountException();
-		System.out.println(this.balance+=amount);
+		System.out.println(balance+=amount);
 	}
 	public void withdrwal(double amount) {
 		if(amount>this.balance)
 			throw new  InsufficientFundsException();
-		System.out.println(this.balance-=amount);
+		System.out.println(balance-=amount);
 	}
 
 }
