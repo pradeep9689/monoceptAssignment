@@ -1,7 +1,7 @@
 package com.monocept.model;
 
 public class NewThread implements Runnable{
-	private Thread thread;
+	public Thread thread;
 	public NewThread(String name) {
 		this.thread=new Thread(this,name);
 		thread.start();
