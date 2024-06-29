@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.TreeMap"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="com.monocept.model.EmployeeByName"/>
-<fullyQualifiedTypeName name="com.monocept.model.EmployeeBySalary"/>
-<fullyQualifiedTypeName name="com.monocept.model.EmployeeCompare.SortByName"/>
-<fullyQualifiedTypeName name="com.monocept.model.EmployeeCompare"/>
-<fullyQualifiedTypeName name="com.monocept.model.InsurancePolicy"/>
-<fullyQualifiedTypeName name="java.util.Collections"/>
-<fullyQualifiedTypeName name="com.monocept.model.CompareClass.SortByName"/>
-<fullyQualifiedTypeName name="com.monocept.model.CompareClass"/>
-<fullyQualifiedTypeName name="com.monocept.model.CompareClass.SortByAmount"/>
-<fullyQualifiedTypeName name="com.monocept.model.CompareClass.SortByNumber"/>
-<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.text.ParseException"/>
 <fullyQualifiedTypeName name="com.monocept.model.CompareClass.SortByDate"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
@@ -27,7 +13,6 @@
 <fullyQualifiedTypeName name="com.monocept.model.NewTask"/>
 <fullyQualifiedTypeName name="java.util.function.BiConsumer"/>
 <fullyQualifiedTypeName name="java.util.function.Supplier"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.function.BiPredicate"/>
 <fullyQualifiedTypeName name="java.util.function.Predicate"/>
 <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
@@ -37,7 +22,6 @@
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="com.monocept.model.Account"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.monocept.srp.violation.Invoice"/>
 <fullyQualifiedTypeName name="com.monocept.ocp.violation.model.FixedDeposit"/>
@@ -55,9 +39,25 @@
 <fullyQualifiedTypeName name="com.monocept.Dip.solution.model.ILogger"/>
 <fullyQualifiedTypeName name="com.monocept.Dip.solution.model.FileLogger"/>
 <fullyQualifiedTypeName name="com.monocept.interfaces.Borrowable"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.monocept.model.Book"/>
 <fullyQualifiedTypeName name="com.monocept.model.CatalogService"/>
 <fullyQualifiedTypeName name="com.monocept.model.EBook"/>
+<fullyQualifiedTypeName name="com.monocept.factory.model.Suzaki"/>
+<fullyQualifiedTypeName name="com.monocept.factory.model.CarFactory"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.monocept.creation.builder.model.User.UserBuilder"/>
+<fullyQualifiedTypeName name="com.monocept.abstractclass.model.Maruti"/>
+<fullyQualifiedTypeName name="com.monocept.abstractclass.model.IcarFactory"/>
+<fullyQualifiedTypeName name="com.monocept.abstractclass.model.Icar"/>
+<fullyQualifiedTypeName name="com.monocept.structural.facade.model.HotelReception"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.monocept.structural.adapter.model.Chocolate"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="com.monocept.exception.DuplicateSupplierException"/>
+<fullyQualifiedTypeName name="com.monocept.model.Product"/>
+<fullyQualifiedTypeName name="com.monocept.exception.ProductNotFoundException"/>
+<fullyQualifiedTypeName name="com.monocept.exception.SupplierNotFoundException"/>
+<fullyQualifiedTypeName name="com.monocept.model.Supplier"/>
 </qualifiedTypeNameHistroy>

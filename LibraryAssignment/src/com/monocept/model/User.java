@@ -14,16 +14,24 @@ public class User {
     public String getName() {
         return name;
     }
+    public void setName(String name) {
+ 		this.name = name;
+ 	}
 
     public String getUserId() {
         return userId;
     }
+    public void setUserId(String userId) {
+		this.userId = userId;
+	}
 
     public void borrowBook(Borrowable item) {
         item.borrowBook(this);
     }
 
-    public void returnBook(Borrowable item) {
+ 
+
+	public void returnBook(Borrowable item) {
         item.returnBook(this);
     }
 }

@@ -10,9 +10,9 @@ public class LibraryManagementSystemTest {
 
 	public static void main(String[] args) {
 		  
-        Book book1 = new Book("1984", "George Orwell");
-        User user1 = new User("Alice", "U123");
-        EBook eBook1=new EBook("KGF","Pradeep","www.google.com");
+        Book book1 = new Book("Gitanjali", "Rabindranath Tagore");
+        User user1 = new User("Pradeep", "U123");
+        EBook eBook1=new EBook("Java","Akash","www.google.com");
 
         BorrowService borrowService = new BorrowService();
         CatalogService catalogService = new CatalogService();
