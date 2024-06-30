@@ -132,7 +132,7 @@ public class Inventory {
     }
 
     public void saveData() throws IOException {
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("inventory.dat"))) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("inventory.txt"))) {
             out.writeObject(products);
             out.writeObject(suppliers);
             out.writeObject(transactions);
@@ -141,7 +141,7 @@ public class Inventory {
 
     @SuppressWarnings("unchecked")
     public void loadData() throws IOException, ClassNotFoundException {
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("inventory.dat"))) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("inventory.txt"))) {
             products = (Map<String, Product>) in.readObject();
             suppliers = (Map<String, Supplier>) in.readObject();
             transactions = (List<Transaction>) in.readObject();

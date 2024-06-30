@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Player2Turn"/>
+		<item key="selection" value="Dat"/>
 		<list key="findhistory">
+			<item value="dat"/>
 			<item value="Player2Turns"/>
 			<item value=" Player1Turns"/>
 			<item value="playCount"/>

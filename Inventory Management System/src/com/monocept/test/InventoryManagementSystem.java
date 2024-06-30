@@ -17,6 +17,9 @@ import com.monocept.model.Transaction;
 import java.io.*;
 import java.util.*;
 
+import java.io.*;
+import java.util.*;
+
 public class InventoryManagementSystem {
     private static Inventory inventory = new Inventory();
 
@@ -46,24 +49,33 @@ public class InventoryManagementSystem {
             System.out.println("7. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
-            if (choice == 1) {
-                productManagementMenu(scanner);
-            } else if (choice == 2) {
-                supplierManagementMenu(scanner);
-            } else if (choice == 3) {
-                transactionManagementMenu(scanner);
-            } else if (choice == 4) {
-                saveData();
-            } else if (choice == 5) {
-                loadData();
-            } else if (choice == 6) {
-                generateReport();
-            } else if (choice == 7) {
-                System.exit(0);
-            } else {
-                System.out.println("Invalid choice. Please try again.");
+            switch (choice) {
+                case 1:
+                    productManagementMenu(scanner);
+                    break;
+                case 2:
+                    supplierManagementMenu(scanner);
+                    break;
+                case 3:
+                    transactionManagementMenu(scanner);
+                    break;
+                case 4:
+                    saveData();
+                    break;
+                case 5:
+                    loadData();
+                    break;
+                case 6:
+                    generateReport();
+                    break;
+                case 7:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
             }
         }
     }
@@ -79,22 +91,29 @@ public class InventoryManagementSystem {
             System.out.println("6. Back to Main Menu");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
-            if (choice == 1) {
-                addProduct(scanner);
-            } else if (choice == 2) {
-                updateProduct(scanner);
-            } else if (choice == 3) {
-                deleteProduct(scanner);
-            } else if (choice == 4) {
-                viewProductDetails(scanner);
-            } else if (choice == 5) {
-                viewAllProducts();
-            } else if (choice == 6) {
-                return;
-            } else {
-                System.out.println("Invalid choice. Please try again.");
+            switch (choice) {
+                case 1:
+                    addProduct(scanner);
+                    break;
+                case 2:
+                    updateProduct(scanner);
+                    break;
+                case 3:
+                    deleteProduct(scanner);
+                    break;
+                case 4:
+                    viewProductDetails(scanner);
+                    break;
+                case 5:
+                    viewAllProducts();
+                    break;
+                case 6:
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
             }
         }
     }
@@ -110,7 +129,7 @@ public class InventoryManagementSystem {
         int quantity = scanner.nextInt();
         System.out.print("Enter Product Price: ");
         double price = scanner.nextDouble();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         Product product = new Product(productId, name, description, quantity, price);
         try {
@@ -190,22 +209,29 @@ public class InventoryManagementSystem {
             System.out.println("6. Back to Main Menu");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
-            if (choice == 1) {
-                addSupplier(scanner);
-            } else if (choice == 2) {
-                updateSupplier(scanner);
-            } else if (choice == 3) {
-                deleteSupplier(scanner);
-            } else if (choice == 4) {
-                viewSupplierDetails(scanner);
-            } else if (choice == 5) {
-                viewAllSuppliers();
-            } else if (choice == 6) {
-                return;
-            } else {
-                System.out.println("Invalid choice. Please try again.");
+            switch (choice) {
+                case 1:
+                    addSupplier(scanner);
+                    break;
+                case 2:
+                    updateSupplier(scanner);
+                    break;
+                case 3:
+                    deleteSupplier(scanner);
+                    break;
+                case 4:
+                    viewSupplierDetails(scanner);
+                    break;
+                case 5:
+                    viewAllSuppliers();
+                    break;
+                case 6:
+                    return; 
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
             }
         }
     }
@@ -287,18 +313,23 @@ public class InventoryManagementSystem {
             System.out.println("4. Back to Main Menu");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
-            if (choice == 1) {
-                addStock(scanner);
-            } else if (choice == 2) {
-                removeStock(scanner);
-            } else if (choice == 3) {
-                viewTransactionHistory(scanner);
-            } else if (choice == 4) {
-                return;
-            } else {
-                System.out.println("Invalid choice. Please try again.");
+            switch (choice) {
+                case 1:
+                    addStock(scanner);
+                    break;
+                case 2:
+                    removeStock(scanner);
+                    break;
+                case 3:
+                    viewTransactionHistory(scanner);
+                    break;
+                case 4:
+                    return; 
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
             }
         }
     }
@@ -308,7 +339,7 @@ public class InventoryManagementSystem {
         String productId = scanner.nextLine();
         System.out.print("Enter Quantity to Add: ");
         int quantity = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         try {
             inventory.addStock(productId, quantity);
@@ -323,7 +354,7 @@ public class InventoryManagementSystem {
         String productId = scanner.nextLine();
         System.out.print("Enter Quantity to Remove: ");
         int quantity = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         try {
             inventory.removeStock(productId, quantity);
