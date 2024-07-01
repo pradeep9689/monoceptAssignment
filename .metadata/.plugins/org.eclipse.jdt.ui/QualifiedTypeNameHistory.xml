@@ -44,7 +44,6 @@
 <fullyQualifiedTypeName name="com.monocept.model.EBook"/>
 <fullyQualifiedTypeName name="com.monocept.factory.model.Suzaki"/>
 <fullyQualifiedTypeName name="com.monocept.factory.model.CarFactory"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.monocept.creation.builder.model.User.UserBuilder"/>
 <fullyQualifiedTypeName name="com.monocept.abstractclass.model.Maruti"/>
 <fullyQualifiedTypeName name="com.monocept.abstractclass.model.IcarFactory"/>
@@ -53,11 +52,12 @@
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="com.monocept.structural.adapter.model.Chocolate"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="com.monocept.exception.DuplicateSupplierException"/>
 <fullyQualifiedTypeName name="com.monocept.model.Product"/>
 <fullyQualifiedTypeName name="com.monocept.exception.ProductNotFoundException"/>
 <fullyQualifiedTypeName name="com.monocept.exception.SupplierNotFoundException"/>
 <fullyQualifiedTypeName name="com.monocept.model.Supplier"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
