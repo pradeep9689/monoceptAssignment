@@ -1,0 +1,9 @@
+package com.monocept.model;
+
+public class Account {
+    private int accountId;
+    private double balance;
+    private int customerId;
+
+    // Constructors, Getters, and Setters
+}

@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  <h1>Search Results</h1>
+    <c:if test="${not empty users}">
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            <c:forEach var="students" items="${students}">
+                <tr>
+                   <%--  <td>${students.id}</td> --%>
+                    <td>${students.name}</td>
+                    <td>${students.email}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </c:if>
+    <c:if test="${empty students}">
+        <p>No results found.</p>
+    </c:if>
+    <br>
+    <a href="search.html">Back to Search</a>
+</body>
+</html>

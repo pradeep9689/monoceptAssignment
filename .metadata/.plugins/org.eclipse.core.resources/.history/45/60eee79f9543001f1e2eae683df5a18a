@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Add Employee</h2>
+    <form action="EmployeeServlet" method="get">
+        <label for="emp_id">Employee ID:</label><br>
+        <input type="text" id="emp_id" name="emp_id"><br>
+        <label for="emp_name">Name:</label><br>
+        <input type="text" id="emp_name" name="emp_name"><br>
+        <label for="emp_mail">Email:</label><br>
+        <input type="text" id="emp_mail" name="emp_mail"><br>
+        <label for="salary">Salary:</label><br>
+        <input type="text" id="salary" name="salary"><br><br>
+        <input type="submit" value="Add Employee">
+    </form>
+</body>
+</html>

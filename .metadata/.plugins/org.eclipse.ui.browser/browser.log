@@ -1,0 +1,43 @@
+
+Jul 11, 2024 14:00:16.11 NEW SESSION
+Jul 11, 2024 14:00:16.11 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 11, 2024 14:01:03.34 [14716:744:0711/140103.346:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+Jul 11, 2024 14:01:03.34 [14716:744:0711/140103.346:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+Jul 11, 2024 14:06:30.13 [14716:744:0711/140630.137:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+Jul 13, 2024 16:39:51.15 NEW SESSION
+Jul 13, 2024 16:39:51.15 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 13, 2024 16:40:21.25 [16292:8128:0713/164021.252:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+
+Jul 14, 2024 21:35:10.33 NEW SESSION
+Jul 14, 2024 21:35:10.33 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 14, 2024 21:35:42.02 [12500:4320:0714/213542.024:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+Jul 14, 2024 21:38:17.98 [12500:13156:0714/213817.980:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 14, 2024 21:38:18.00 [12500:13156:0714/213818.003:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 14, 2024 21:38:21.24 [12500:1280:0714/213821.243:ERROR:get_updates_processor.cc(263)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_NETWORK_CHANGED)
+
+Jul 15, 2024 14:53:58.29 NEW SESSION
+Jul 15, 2024 14:53:58.29 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 15, 2024 15:00:30.10 [11904:16352:0715/150030.108:ERROR:device_event_log_impl.cc(196)] [15:00:30.107] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Jul 15, 2024 16:32:11.40 [11904:16352:0715/163211.405:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+Jul 16, 2024 08:24:09.20 NEW SESSION
+Jul 16, 2024 08:24:09.20 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 16, 2024 08:24:39.33 [13012:15632:0716/082439.334:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+
+Jul 17, 2024 08:49:03.61 NEW SESSION
+Jul 17, 2024 08:49:03.61 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 17, 2024 08:49:34.34 [8844:1864:0717/084934.344:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+Jul 17, 2024 08:58:11.08 [8844:14132:0717/085811.089:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 17, 2024 08:58:15.43 [8844:1864:0717/085815.432:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+Jul 17, 2024 15:26:51.91 NEW SESSION
+Jul 17, 2024 15:26:51.91 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 17, 2024 15:29:48.89 [660:10404:0717/152948.898:ERROR:device_event_log_impl.cc(196)] [15:29:48.897] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Jul 17, 2024 15:29:54.44 [660:10404:0717/152954.440:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+Jul 17, 2024 16:03:33.20 [660:10404:0717/160333.206:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+Jul 17, 2024 18:06:25.01 [660:10404:0717/180625.013:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+Jul 18, 2024 22:46:30.06 NEW SESSION
+Jul 18, 2024 22:46:30.06 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 18, 2024 22:53:32.03 [12356:3556:0718/225332.029:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost

@@ -1,0 +1,35 @@
+package com.monocept.model;
+
+public class Employee {
+private int id;
+private String name;
+private double salray;
+
+
+public Employee(int id, String name, double salray) {
+	super();
+	this.id = id;
+	this.name = name;
+	this.salray = salray;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public double getSalray() {
+	return salray;
+}
+public void setSalray(double salray) {
+	this.salray = salray;
+}
+
+
+}

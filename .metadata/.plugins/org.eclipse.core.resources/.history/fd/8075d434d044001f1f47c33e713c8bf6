@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+<div class ="text-center">
+ <h2>Update Student</h2>
+ </div>
+ <hr>
+    <form action="StudentControlller" method="get">
+       
+       
+         <input type="hidden" name="command" value="update"> 
+         <input type="hidden" name="id" value="${theStudent.id}">
+</body>
+</html>

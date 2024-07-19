@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;student-form.jsp&apos; to &apos;WebContent&apos;&#x0D;&#x0A;- Original project: &apos;02-jsp-form&apos;&#x0D;&#x0A;- Destination element: &apos;WebContent&apos;&#x0D;&#x0A;- Original element: &apos;student-form.jsp&apos;" description="Copy file" element1="WebContent/student-form.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1721041781000" target="/05-hello-servlet/WebContent" units="0" version="1.0"/>
+</session>

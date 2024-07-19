@@ -1,0 +1,13 @@
+package com.monocept.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentDb {
+
+	public static List<Student> getStudentDetails(){
+		List<Student> students=new ArrayList<>();
+		
+		return null;
+	}
+}

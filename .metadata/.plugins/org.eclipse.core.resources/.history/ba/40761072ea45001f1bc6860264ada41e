@@ -1,0 +1,15 @@
+package com.monocept.model;
+
+import java.util.Date;
+
+public class Transaction {
+    private int transactionId;
+    private int senderAccNo;
+    private int receiverAccNo;
+    private String type;
+    private double amount;
+    private Date date;
+
+    // Constructors, Getters, and Setters
+}
+
