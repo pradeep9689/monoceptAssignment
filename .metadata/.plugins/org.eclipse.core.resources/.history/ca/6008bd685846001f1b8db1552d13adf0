@@ -1,0 +1,164 @@
+package com.monocept.controllers;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.sql.DataSource;
+
+import com.monocept.DAO.AccountDAO;
+import com.monocept.DAO.CustomerDAO;
+import com.monocept.DAO.TransactionDAO;
+import com.monocept.model.Account;
+import com.monocept.model.Customer;
+import com.monocept.model.Transaction;
+
+@WebServlet("/BankController")
+
+
+	public class BankController extends HttpServlet {
+		private static final long serialVersionUID = 1L;
+	}
+	    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	        doGet(request, response);
+	    }
+
+	    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	        String action = request.getParameter("action");
+	        if (action == null) {
+	            action = "";
+	        }
+	        try {
+	            switch (action) {
+	                case "login":
+	                    handleLogin(request, response);
+	                    break;
+	                case "newTransaction":
+	                    handleNewTransaction(request, response);
+	                    break;
+	                case "editProfile":
+	                    handleEditProfile(request, response);
+	                    break;
+	                default:
+	                    response.sendRedirect("index.jsp");
+	                    break;
+	            }
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	            request.setAttribute("errorMessage", "An error occurred: " + e.getMessage());
+	            request.getRequestDispatcher("error.jsp").forward(request, response);
+	        }
+	    }
+
+	    private void handleLogin(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	        String email = request.getParameter("email");
+	        String password = request.getParameter("password");
+	        String role = request.getParameter("role");
+
+	        if (email == null || password == null || role == null) {
+	            request.setAttribute("errorMessage", "Missing login parameters");
+	            request.getRequestDispatcher("login.jsp").forward(request, response);
+	            return;
+	        }
+
+	        Customer customer = CustomerDAO.getCustomerByEmailAndPassword(email, password);
+
+	        if (customer == null) {
+	            request.setAttribute("errorMessage", "Invalid email or password");
+	            request.getRequestDispatcher("login.jsp").forward(request, response);
+	            return;
+	        }
+
+	        HttpSession session = request.getSession();
+	        session.setAttribute("customer", customer);
+	        session.setAttribute("role", role);
+
+	        if ("admin".equals(role)) {
+	            response.sendRedirect("adminHome.jsp");
+	        } else {
+	            response.sendRedirect("customerHome.jsp");
+	        }
+	    }
+
+	    private void handleNewTransaction(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	        String senderAccNoStr = request.getParameter("senderAccNo");
+	        String receiverAccNoStr = request.getParameter("receiverAccNo");
+	        String type = request.getParameter("type");
+	        String amountStr = request.getParameter("amount");
+	        String dateStr = request.getParameter("date");
+
+	        if (senderAccNoStr == null || receiverAccNoStr == null || type == null || amountStr == null || dateStr == null) {
+	            request.setAttribute("errorMessage", "Missing transaction parameters");
+	            request.getRequestDispatcher("newTransaction.jsp").forward(request, response);
+	            return;
+	        }
+
+	        int senderAccNo = Integer.parseInt(senderAccNoStr);
+	        int receiverAccNo = Integer.parseInt(receiverAccNoStr);
+	        double amount = Double.parseDouble(amountStr);
+
+	        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+	        Date date;
+	        try {
+	            date = dateFormat.parse(dateStr);
+	        } catch (ParseException e) {
+	            request.setAttribute("errorMessage", "Invalid date format");
+	            request.getRequestDispatcher("newTransaction.jsp").forward(request, response);
+	            return;
+	        }
+
+	        Transaction transaction = new Transaction();
+	        transaction.setSenderAccNo(senderAccNo);
+	        transaction.setReceiverAccNo(receiverAccNo);
+	        transaction.setType(type);
+	        transaction.setAmount(amount);
+	        transaction.setDate(new java.sql.Date(date.getTime()));
+
+	        boolean success = TransactionDAO.addTransaction(transaction);
+
+	        if (success) {
+	            response.sendRedirect("BankController?action=viewTransactions&accountId=" + senderAccNo);
+	        } else {
+	            request.setAttribute("errorMessage", "Failed to perform transaction");
+	            request.getRequestDispatcher("newTransaction.jsp").forward(request, response);
+	        }
+	    }
+
+	    private void handleEditProfile(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	        String customerIdStr = request.getParameter("customerId");
+	        String firstName = request.getParameter("firstName");
+	        String lastName = request.getParameter("lastName");
+	        String email = request.getParameter("email");
+
+	        if (customerIdStr == null || firstName == null || lastName == null || email == null) {
+	            request.setAttribute("errorMessage", "Missing profile parameters");
+	            request.getRequestDispatcher("editProfile.jsp").forward(request, response);
+	            return;
+	        }
+
+	        int customerId = Integer.parseInt(customerIdStr);
+
+	        Customer customer = new Customer();
+	        customer.setCustomerId(customerId);
+	        customer.setFirstName(firstName);
+	        customer.setLastName(lastName);
+	        customer.setEmail(email);
+
+	        boolean success = CustomerDAO.updateCustomer(customer);
+
+	        if (success) {
+	            response.sendRedirect("BankController?action=viewCustomers");
+	        } else {
+	            request.setAttribute("errorMessage", "Failed to update profile");
+	            request.getRequestDispatcher("editProfile.jsp").forward(request, response);
+	        }
+	    }
+	}

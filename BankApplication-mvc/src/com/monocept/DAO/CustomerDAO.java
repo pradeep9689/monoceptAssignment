@@ -87,5 +87,29 @@ public class CustomerDAO {
         }
         return customer;
     }
-}
 
+    public static boolean updateCustomer(Customer customer) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        boolean updateStatus = false;
+
+        try {
+            conn = DBConnection.getConnection();
+            String sql = "UPDATE customers SET first_name = ?, last_name = ?, email = ? WHERE customer_id = ?";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, customer.getFirstName());
+            pstmt.setString(2, customer.getLastName());
+            pstmt.setString(3, customer.getEmail());
+            pstmt.setInt(4, customer.getCustomerId());
+
+            int rowsUpdated = pstmt.executeUpdate();
+            updateStatus = (rowsUpdated > 0);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+           
+        }
+        return updateStatus;
+    }
+}

@@ -6,7 +6,7 @@
   <module moduleId="org.eclipse.jst.jee.server:06-student-withoutdb" serverId="Tomcat v9.0 Server at localhost (3)"/>
   <module moduleId="org.eclipse.jst.jee.server:07-jdbc-test" serverId="Tomcat v9.0 Server at localhost (3)"/>
   <module moduleId="org.eclipse.jst.jee.server:02-jsp-form" serverId="Tomcat v9.0 Server at localhost (3)"/>
+  <module moduleId="org.eclipse.jst.jee.server:BankApplication-mvc" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:05-hello-servlet" serverId="Tomcat v9.0 Server at localhost (3)"/>
-  <module moduleId="org.eclipse.jst.jee.server:09-student-mvc-db" serverId="Tomcat v9.0 Server at localhost (3)"/>
   <module moduleId="org.eclipse.jst.jee.server:04-jstl-tag-demo" serverId="Tomcat v9.0 Server at localhost (3)"/>
 </modules>

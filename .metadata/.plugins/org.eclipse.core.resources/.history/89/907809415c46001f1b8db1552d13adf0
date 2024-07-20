@@ -1,0 +1,162 @@
+package com.monocept.controllers;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.sql.DataSource;
+
+import com.monocept.DAO.AccountDAO;
+import com.monocept.DAO.CustomerDAO;
+import com.monocept.DAO.TransactionDAO;
+import com.monocept.model.Account;
+import com.monocept.model.Customer;
+import com.monocept.model.Transaction;
+
+@WebServlet("/BankController")
+public class BankController extends HttpServlet {
+    
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+
+        switch(action) {
+            case "login":
+                handleLogin(request, response);
+                break;
+            case "addCustomer":
+                handleAddCustomer(request, response);
+                break;
+            case "viewCustomers":
+                handleViewCustomers(request, response);
+                break;
+            case "viewTransactions":
+                handleViewTransactions(request, response);
+                break;
+            case "addAccount":
+                handleAddAccount(request, response);
+                break;
+            case "newTransaction":
+                handleNewTransaction(request, response);
+                break;
+            case "editProfile":
+                handleEditProfile(request, response);
+                break;
+            default:
+                response.sendRedirect("index.jsp");
+        }
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doPost(request, response);
+    }
+
+    private void handleLogin(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String role = request.getParameter("role");
+
+        if (email == null || password == null || role == null) {
+            request.setAttribute("errorMessage", "Missing login parameters");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+            return;
+        }
+
+    private void handleAddCustomer(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        Customer customer = new Customer();
+        customer.setFirstName(firstName);
+        customer.setLastName(lastName);
+        customer.setEmail(email);
+        customer.setPassword(password);
+
+        boolean success = CustomerDAO.addCustomer(customer);
+
+        if (success) {
+            response.sendRedirect("BankController?action=viewCustomers");
+        } else {
+            request.setAttribute("errorMessage", "Failed to add customer");
+            request.getRequestDispatcher("addCustomer.jsp").forward(request, response);
+        }
+    }
+
+    private void handleViewCustomers(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        List<Customer> customers = CustomerDAO.getAllCustomers();
+        request.setAttribute("customers", customers);
+        request.getRequestDispatcher("viewCustomers.jsp").forward(request, response);
+    }
+
+    private void handleViewTransactions(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        int accountId = Integer.parseInt(request.getParameter("accountId"));
+        List<Transaction> transactions = TransactionDAO.getTransactionsByAccountId(accountId);
+        request.setAttribute("transactions", transactions);
+        request.getRequestDispatcher("viewTransactions.jsp").forward(request, response);
+    }
+
+    private void handleAddAccount(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        int customerId = Integer.parseInt(request.getParameter("customerId"));
+        double balance = Double.parseDouble(request.getParameter("balance"));
+
+        Account account = new Account();
+        account.setCustomerId(customerId);
+        account.setBalance(balance);
+
+        boolean success = AccountDAO.addAccount(account);
+
+        if (success) {
+            response.sendRedirect("BankController?action=viewCustomers");
+        } else {
+            request.setAttribute("errorMessage", "Failed to add account");
+            request.getRequestDispatcher("addAccount.jsp").forward(request, response);
+        }
+    }
+
+    private void handleNewTransaction(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        int senderAccNo = Integer.parseInt(request.getParameter("senderAccNo"));
+        int receiverAccNo = Integer.parseInt(request.getParameter("receiverAccNo"));
+        String type = request.getParameter("type");
+        double amount = Double.parseDouble(request.getParameter("amount"));
+        String dateStr = request.getParameter("date");
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = null;
+        try {
+            date = sdf.parse(dateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        Transaction transaction = new Transaction();
+        transaction.setSenderAccNo(senderAccNo);
+        transaction.setReceiverAccNo(receiverAccNo);
+        transaction.setType(type);
+        transaction.setAmount(amount);
+        transaction.setDate(date);
+
+        boolean success = TransactionDAO.addTransaction(transaction);
+
+        if (success) {
+            response.sendRedirect("BankController?action=viewTransactions&accountId=" + senderAccNo);
+        } else {
+            request.setAttribute("errorMessage", "Failed to add transaction");
+            request.getRequestDispatcher("newTransaction.jsp").forward(request, response);
+        }
+    }
+
+    private void handleEditProfile(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        // Implement edit profile logic
+    }
+}

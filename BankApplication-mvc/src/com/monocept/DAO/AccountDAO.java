@@ -7,9 +7,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import com.monocept.model.Account;
 
 public class AccountDAO {
+	
     public static boolean addAccount(Account account) {
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement("INSERT INTO Account (customerId, balance) VALUES (?, ?)")) {

@@ -17,8 +17,8 @@
             <li><a href="BankController?action=viewCustomers">View Customers</a></li>
             <li><a href="addCustomer.jsp">Add Customer</a></li>
             <li><a href="addAccount.jsp">Add Account</a></li>
-            <li><a href="newTransaction.jsp">New Transaction</a></li>
-            <li><a href="logout.jsp">Logout</a></li>
+            
+            <li><a href="login.jsp">Logout</a></li>
         </ul>
     </nav>
 </body>

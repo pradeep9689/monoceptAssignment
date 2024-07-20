@@ -16,7 +16,8 @@
         <ul>
             <li><a href="BankController?action=viewTransactions&accountId=${sessionScope.customer.customerId}">View Transactions</a></li>
             <li><a href="editProfile.jsp">Edit Profile</a></li>
-            <li><a href="logout.jsp">Logout</a></li>
+            <li><a href="newTransaction.jsp">New Transaction</a></li>
+            <li><a href="login.jsp">Logout</a></li>
         </ul>
     </nav>
 </body>
