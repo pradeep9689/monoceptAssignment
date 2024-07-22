@@ -11,7 +11,7 @@ public class Account {
 		this.customerId = customerId;
 	}
 	public Account() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	public int getAccountId() {
 		return accountId;

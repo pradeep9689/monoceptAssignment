@@ -9,107 +9,169 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.monocept.model.Customer;
+import com.monocept.model.Transaction;
 
 public class CustomerDAO {
-    public static boolean addCustomer(Customer customer) {
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement("INSERT INTO Customer (firstName, lastName, email, password) VALUES (?, ?, ?, ?)")) {
-            stmt.setString(1, customer.getFirstName());
-            stmt.setString(2, customer.getLastName());
-            stmt.setString(3, customer.getEmail());
-            stmt.setString(4, customer.getPassword());
-            int rowsInserted = stmt.executeUpdate();
-            return rowsInserted > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
 
-    public static List<Customer> getAllCustomers() {
-        List<Customer> customers = new ArrayList<>();
-        try (Connection conn = DBConnection.getConnection();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM Customer")) {
-            while (rs.next()) {
-                Customer customer = new Customer();
-                customer.setCustomerId(rs.getInt("customerId"));
-                customer.setFirstName(rs.getString("firstName"));
-                customer.setLastName(rs.getString("lastName"));
-                customer.setEmail(rs.getString("email"));
-                customers.add(customer);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return customers;
-    }
+	// Add Customer
+	public static boolean addCustomer(Customer customer) {
+		boolean success = false;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
 
-    public static Customer getCustomerById(int id) {
-        Customer customer = null;
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Customer WHERE customerId = ?")) {
-            stmt.setInt(1, id);
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    customer = new Customer();
-                    customer.setCustomerId(rs.getInt("customerId"));
-                    customer.setFirstName(rs.getString("firstName"));
-                    customer.setLastName(rs.getString("lastName"));
-                    customer.setEmail(rs.getString("email"));
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return customer;
-    }
+		try {
+			conn = DBConnection.getConnection();
+			String sql = "INSERT INTO customer (firstName, lastName, password, email, gender, address, phoneNumber) VALUES (?, ?, ?, ?, ?, ?, ?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, customer.getFirstName());
+			pstmt.setString(2, customer.getLastName());
+			pstmt.setString(3, customer.getPassword());
+			pstmt.setString(4, customer.getEmail());
+			pstmt.setString(5, customer.getGender());
+			pstmt.setString(6, customer.getAddress());
+			pstmt.setString(7, customer.getPhoneNumber());
 
-    public static Customer getCustomerByEmailAndPassword(String email, String password) {
-        Customer customer = null;
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Customer WHERE email = ? AND password = ?")) {
-            stmt.setString(1, email);
-            stmt.setString(2, password);
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    customer = new Customer();
-                    customer.setCustomerId(rs.getInt("customerId"));
-                    customer.setFirstName(rs.getString("firstName"));
-                    customer.setLastName(rs.getString("lastName"));
-                    customer.setEmail(rs.getString("email"));
-                    // You might not want to set the password for security reasons, but it can be done like this:
-                    // customer.setPassword(rs.getString("password"));
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return customer;
-    }
+			int rowsAffected = pstmt.executeUpdate();
+			success = (rowsAffected > 0);
 
-    public static boolean updateCustomer(Customer customer) {
-        Connection conn = null;
-        PreparedStatement pstmt = null;
-        boolean updateStatus = false;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
 
-        try {
-            conn = DBConnection.getConnection();
-            String sql = "UPDATE customers SET first_name = ?, last_name = ?, email = ? WHERE customer_id = ?";
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, customer.getFirstName());
-            pstmt.setString(2, customer.getLastName());
-            pstmt.setString(3, customer.getEmail());
-            pstmt.setInt(4, customer.getCustomerId());
+		}
+		return success;
+	}
 
-            int rowsUpdated = pstmt.executeUpdate();
-            updateStatus = (rowsUpdated > 0);
+	public static boolean updateCustomer(Customer customer) {
+		boolean success = false;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-           
-        }
-        return updateStatus;
-    }
+		try {
+			conn = DBConnection.getConnection();
+			String sql = "UPDATE customer SET firstName = ?, lastName = ?, password = ?, email = ?, address = ?, phoneNumber = ? WHERE customerId = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, customer.getFirstName());
+			pstmt.setString(2, customer.getLastName());
+			pstmt.setString(3, customer.getPassword());
+			pstmt.setString(4, customer.getEmail());
+
+			pstmt.setString(5, customer.getAddress());
+			pstmt.setString(6, customer.getPhoneNumber());
+			pstmt.setInt(7, customer.getCustomerId());
+
+			int rowsAffected = pstmt.executeUpdate();
+			success = (rowsAffected > 0);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+
+		}
+		return success;
+	}
+
+	public static Customer getCustomerByEmailAndPassword(String email, String password) {
+		Customer customer = null;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			conn = DBConnection.getConnection();
+			String sql = "SELECT * FROM customer WHERE email = ? AND password = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, email);
+			pstmt.setString(2, password);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				customer = new Customer();
+				customer.setCustomerId(rs.getInt("customerId"));
+				customer.setFirstName(rs.getString("firstName"));
+				customer.setLastName(rs.getString("lastName"));
+				customer.setPassword(rs.getString("password"));
+				customer.setEmail(rs.getString("email"));
+				customer.setGender(rs.getString("gender"));
+				customer.setAddress(rs.getString("address"));
+				customer.setPhoneNumber(rs.getString("phoneNumber"));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+
+		}
+		return customer;
+	}
+
+	public static Customer getCustomerById(int customerId) {
+		Customer customer = null;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			conn = DBConnection.getConnection();
+			String sql = "SELECT * FROM customer WHERE customerId = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, customerId);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				customer = new Customer();
+				customer.setCustomerId(rs.getInt("customerId"));
+				customer.setFirstName(rs.getString("firstName"));
+				customer.setLastName(rs.getString("lastName"));
+				customer.setPassword(rs.getString("password"));
+				customer.setEmail(rs.getString("email"));
+				customer.setGender(rs.getString("gender"));
+				customer.setAddress(rs.getString("address"));
+				customer.setPhoneNumber(rs.getString("phoneNumber"));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+
+		}
+		return customer;
+	}
+
+	public static List<Customer> getAllCustomers() {
+		List<Customer> customers = new ArrayList<>();
+		try (Connection conn = DBConnection.getConnection();
+				Statement stmt = conn.createStatement();
+				ResultSet rs = stmt.executeQuery("SELECT * FROM customer")) {
+			while (rs.next()) {
+				Customer customer = new Customer();
+				customer.setCustomerId(rs.getInt("customerId"));
+				customer.setFirstName(rs.getString("firstName"));
+				customer.setLastName(rs.getString("lastName"));
+				customer.setEmail(rs.getString("email"));
+				customer.setGender(rs.getString("gender"));
+				customer.setAddress(rs.getString("address"));
+				customer.setPhoneNumber(rs.getString("phoneNumber"));
+				customers.add(customer);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return customers;
+	}
+
+	public static int getAccountIdByCustomerId(int customerId) {
+		try (Connection conn = DBConnection.getConnection()) {
+			String sql = "SELECT accountId FROM accounts WHERE customerId = ?";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setInt(1, customerId);
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) {
+				return rs.getInt("accountId");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 }

@@ -41,3 +41,30 @@ Jul 17, 2024 18:06:25.01 [660:10404:0717/180625.013:ERROR:interface_endpoint_cli
 Jul 18, 2024 22:46:30.06 NEW SESSION
 Jul 18, 2024 22:46:30.06 Created TensorFlow Lite XNNPACK delegate for CPU.
 Jul 18, 2024 22:53:32.03 [12356:3556:0718/225332.029:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+Jul 20, 2024 20:41:04.53 NEW SESSION
+Jul 20, 2024 20:41:04.53 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 20, 2024 20:47:14.15 [12720:11092:0720/204714.159:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+Jul 20, 2024 22:15:47.86 [12720:9184:0720/221547.863:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 20, 2024 22:15:49.05 [12720:11092:0720/221549.059:ERROR:device_event_log_impl.cc(196)] [22:15:49.059] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Jul 20, 2024 22:15:49.92 [12720:9184:0720/221549.919:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -106
+Jul 20, 2024 22:29:03.73 [12720:11092:0720/222903.739:ERROR:device_event_log_impl.cc(196)] [22:29:03.740] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Jul 20, 2024 22:29:03.97 [12720:9184:0720/222903.972:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -106
+Jul 21, 2024 24:48:09.80 [12720:11092:0721/004809.806:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+Jul 21, 2024 16:38:59.52 NEW SESSION
+Jul 21, 2024 16:38:59.52 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Jul 22, 2024 16:13:27.34 NEW SESSION
+Jul 22, 2024 16:13:27.34 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 22, 2024 16:15:20.91 [9256:9192:0722/161520.913:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jul 22, 2024 16:22:11.22 [9256:5992:0722/162211.223:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+Jul 22, 2024 17:10:28.30 [9256:5992:0722/171028.300:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+Jul 22, 2024 17:29:01.99 [9256:5992:0722/172901.993:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+Jul 22, 2024 17:44:40.70 [9256:5992:0722/174440.705:ERROR:device_event_log_impl.cc(196)] [17:44:40.704] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Jul 22, 2024 17:45:06.94 [9256:9192:0722/174506.944:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Jul 22, 2024 18:15:26.87 [9256:9192:0722/181526.876:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Jul 22, 2024 18:23:45.63 [9256:9192:0722/182345.636:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Jul 22, 2024 18:38:11.74 [9256:5992:0722/183811.743:ERROR:fallback_task_provider.cc(127)] Every renderer should have at least one task provided by a primary task provider. If a "Renderer" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/739782.
+Jul 22, 2024 19:06:55.69 [9256:5992:0722/190655.698:ERROR:fallback_task_provider.cc(127)] Every renderer should have at least one task provided by a primary task provider. If a "Renderer" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/739782.
+Jul 22, 2024 19:20:41.55 [9256:5992:0722/192041.550:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost

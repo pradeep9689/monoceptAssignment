@@ -9,18 +9,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <filter>
-        <filter-name>AuthenticationFilter</filter-name>
-        <filter-class>com.monocept.filters.AuthenticationFilter</filter-class>
+ <!--  <filter>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>com.monocept.filters.AdminFilter</filter-class>
     </filter>
     <filter-mapping>
-        <filter-name>AuthenticationFilter</filter-name>
+        <filter-name>AdminFilter</filter-name>
         <url-pattern>/admin/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping> -->
 
-    <session-config>
-        <session-timeout>30</session-timeout>
-    </session-config>
+    
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
