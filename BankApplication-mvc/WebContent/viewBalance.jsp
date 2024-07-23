@@ -54,7 +54,9 @@
                 <p class="text-danger">Unable to retrieve balance. Please try again later.</p>
             </c:otherwise>
         </c:choose>
-        <a href="customerHome.jsp" class="btn btn-link">Back to Home</a>
+          <form action="BankController" method="post">
+            <button type="submit" name="action" value ="backCustomerHome"  class="btn btn-link">Back</button>
+            </form>
     </div>
 
     <!-- Bootstrap JS and dependencies -->

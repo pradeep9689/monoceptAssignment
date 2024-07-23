@@ -76,7 +76,9 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <a href="customerHome.jsp" class="btn btn-link">Back to Home</a>
+          <form action="BankController" method="post">
+            <button type="submit" name="action" value ="backCustomerHome"  class="btn btn-link">Back</button>
+            </form>
     </div>
 
     <!-- Bootstrap JS and dependencies -->

@@ -69,11 +69,10 @@
                 <li class="list-group">
                     <a  class="list-group-item list-group-item-action btn btn-primary btn-custom" href="BankController?action=passbook&accountId=${sessionScope.customer.customerId}">PassBook</a>
                 </li>
-                
+                <form >
                 <li class="list-group">
-                <form action="BankController" method="post">
-                    <button type="submit" name="action"   class="list-group-item list-group-item-action btn btn-primary btn-custom" value="editProfilePage">Edit Profile</button>
-                </form></li>
+                    <button type="submit" name="action" value="editProfilePage" class="list-group-item list-group-item-action btn btn-primary btn-custom" >Edit Profile</a>
+                </li></form>
                 <li class="list-group">
                     <a  class="list-group-item list-group-item-action btn btn-primary btn-custom" href="newTransaction.jsp?accountId=${sessionScope.customer.customerId}">New Transaction</a>
                 </li>
@@ -85,13 +84,15 @@
                 <li class="list-group">
                 <form action="BankController" method="post">
                     <button name="action" value="transferPage" class="list-group-item list-group-item-action btn btn-primary btn-custom" >Transfer to account</button>
-                </li>
-                <li class="list-group">
-                   <button type="submit" name="action" value="logout"  class="list-group-item list-group-item-action btn btn-primary btn-custom"  class="text-danger">Logout<button>
-                </li>
-                </form>
+                </form></li>
+               
+                
             </ul>
         </nav>
+         
+                <form action="logout" method="get">
+                   <button type="submit" class="text-danger">Logout<button>
+               </form> 
     </div>
     </div>
 

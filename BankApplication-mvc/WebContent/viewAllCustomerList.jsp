@@ -81,7 +81,9 @@
                 </c:forEach>
             </tbody>
         </table>
-        <a href="adminHome.jsp" class="btn btn-link">Back to Home</a>
+        <form action="BankController" method="post">
+            <button type="submit" name="action" value ="backAdminHome"  class="btn btn-link">Back</button>
+            </form>
     </div>
 
     <!-- Bootstrap JS and dependencies -->

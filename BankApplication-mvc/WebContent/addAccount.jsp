@@ -27,8 +27,11 @@
             </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>
-            <a href="adminHome.jsp" class="btn btn-secondary">Back</a>
+              
         </form>
+        <form action="BankController" method="post">
+            <button type="submit" name="action" value ="backAdminHome"  class="btn btn-link">Back</button>
+            </form>
     </div>
 
     <!-- Bootstrap JS and dependencies -->

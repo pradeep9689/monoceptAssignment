@@ -66,9 +66,12 @@
                 <button type="submit" name="action" value="addAccountPage" class="list-group-item list-group-item-action btn btn-success btn-custom">Add Account</button>
                 <button type="submit" name="action" value="viewTransactionsPage" class="list-group-item list-group-item-action btn btn-info btn-custom">View Transactions</button>
               
-                <button type="submit" name="action" value="logout" class="list-group-item list-group-item-action btn btn-danger btn-custom">Logout</button>
+                <!-- <button type="submit" name="action" value="logout" class="list-group-item list-group-item-action btn btn-danger btn-custom">Logout</button> -->
                
                 </form>
+                 <form action="logout" method="get">
+                  <button type="submit"   class="text-danger">Logout<button>
+                  </button>
             </div>
         </div>
     </div>

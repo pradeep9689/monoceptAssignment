@@ -61,6 +61,9 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <form action="BankController" method="post">
+            <button type="submit" name="action" value ="backAdminHome"  class="btn btn-link">Back</button>
+            </form>
 
         <c:if test="${not empty customer}">
             <div class="customer-info">

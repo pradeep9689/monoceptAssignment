@@ -94,6 +94,9 @@ public class BankController extends HttpServlet {
 		case "backCustomerHome":
 			handleBackCustomerHome(request, response);
 			break;
+		case "backAdminHome":
+			handleBackAdminHome(request, response);
+			break;
 		case "viewTransactionPage":
 			handleViewTransactionPage(request, response);
 			break;
@@ -103,6 +106,11 @@ public class BankController extends HttpServlet {
 		default:
 			response.sendRedirect("index.jsp");
 		}
+	}
+
+	private void handleBackAdminHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("adminHome.jsp").forward(request, response);	
+		
 	}
 
 	private void handleEditProfilePage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
