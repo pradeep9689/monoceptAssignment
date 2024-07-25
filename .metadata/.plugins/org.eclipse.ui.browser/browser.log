@@ -88,3 +88,7 @@ Jul 23, 2024 09:51:49.32 [12380:9948:0723/095149.322:ERROR:fallback_task_provide
 Jul 23, 2024 09:51:50.25 [12380:9948:0723/095150.254:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
 Jul 23, 2024 09:51:55.68 [12380:9948:0723/095155.682:ERROR:fallback_task_provider.cc(127)] Every renderer should have at least one task provided by a primary task provider. If a "Renderer" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/739782.
 Jul 23, 2024 09:53:16.47 [12380:9948:0723/095316.473:ERROR:fallback_task_provider.cc(127)] Every renderer should have at least one task provided by a primary task provider. If a "Renderer" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/739782.
+
+Jul 24, 2024 21:06:51.87 NEW SESSION
+Jul 24, 2024 21:06:51.87 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 24, 2024 21:07:19.93 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).

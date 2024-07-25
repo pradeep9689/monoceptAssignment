@@ -91,8 +91,8 @@ public class AccountDAO {
 			throw new IllegalArgumentException("Invalid transaction type: " + type);
 		}
 
-		// Use try-with-resources to ensure resources are closed properly
-		try (Connection conn = DBConnection.getConnection(); // Replace with your method to get a DB connection
+		
+		try (Connection conn = DBConnection.getConnection(); 
 				PreparedStatement stmt = conn.prepareStatement(sql)) {
 
 			// Set the parameters
